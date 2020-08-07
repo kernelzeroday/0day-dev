@@ -1,3 +1,7 @@
+This repo is a collection of code and research samples intended to display techniques on generic exploit development methodology. I dont know what the fuck i am doing, this is a scratchpad to attempt to document not knowing anything to having a functional exploit. Starting off we have 2 exploits, both buffer overflow, the first via an argv[i] -> buf[256] and the second is gets() -> buf[1024] rather than argv. 
+
+Neither work, both need signifigant engineering effort to create a generic process for automated exploit development but both are promising and should see progress shortly. DB access to enter private restricted beta after completion of generic vuln exploitation process demo poc tutorial writeup.
+
 ```
 (ins)kod@a:~/rev$ vagrant up
 Bringing machine 'default' up with 'virtualbox' provider...
