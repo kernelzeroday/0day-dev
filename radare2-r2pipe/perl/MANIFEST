@@ -1,0 +1,3 @@
+lib/Radare/r2pipe.pm
+Makefile.PL
+t/test.pl

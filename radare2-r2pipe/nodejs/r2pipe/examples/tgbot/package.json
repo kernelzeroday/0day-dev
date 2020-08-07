@@ -1,0 +1,13 @@
+{ 
+	"name": "r2pipe-tgbot",
+	"version": "0.0.1",
+	"dependencies": {
+		"r2pipe": "*"
+	},
+	"optionalDependencies": {
+		"js-beautify": "*"
+	},
+	"scripts": {
+		"bot": "node index.js"
+	}
+}
