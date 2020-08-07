@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple NTP client
+Documentation=man:ntpclient
+Documentation=file:/usr/local/share/doc/ntpclient/README.md
+Documentation=https://github.com/troglobit/ntpclient
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/ntpclient -n pool.ntp.org
+
+[Install]
+WantedBy=multi-user.target
